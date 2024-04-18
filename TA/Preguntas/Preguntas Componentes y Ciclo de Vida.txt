@@ -1,0 +1,26 @@
+Pregunta #1
+¿Cuál es la mejor manera de abordar la optimización del rendimiento en una aplicación React? [Semana #2]
+
+A. Mediante la implementación de una lógica compleja en cada componente
+B. Aplicando técnicas de memoización y lazy loading de componentes
+C. Dependiendo únicamente del poder de procesamiento del cliente
+
+ANSWER: B
+
+Pregunta #2
+¿Qué estrategia es más adecuada para gestionar el estado en una aplicación React de gran escala? [Semana #2]
+
+A. Utilizar solamente el estado local de cada componente
+B. Implementar un estado global utilizando herramientas como Redux o Context API
+C. Depender exclusivamente del estado de los componentes padres
+
+ANSWER: B
+
+Pregunta #3
+¿Cuál es la mejor práctica para estructurar una aplicación React para una fácil mantenibilidad y escalabilidad? [Semana #2]
+
+A. Dividir la aplicación en múltiples componentes pequeños y reutilizables
+B. Crear un único componente grande que contenga toda la lógica de la aplicación
+C. Depender de componentes de terceros para todas las funcionalidades
+
+ANSWER: A

@@ -1,0 +1,18 @@
+Teoría:
+Los componentes son la unidad fundamental de la interfaz de usuario. Pueden ser como un botón o  como un formulario ademas pueden contener tanto la lógica como la interfaz de usuario de una parte de la aplicación.
+
+Reflexión:
+Los componentes en React tienen un ciclo de vida que describe cómo se montan, actualizan y desmontan en la interfaz de usuario.
+
+Analogía:
+Puedes pensar en el ciclo de vida de un componente en React como una serie de eventos que ocurren desde que el componente se crea hasta que se elimina de la interfaz de usuario. Es como una serie de etapas por las que pasa el componente durante su existencia.
+
+Resumen:
+El ciclo de vida de un componente en React se puede dividir en tres fases principales: montaje, actualización y desmontaje. Durante el montaje, el componente se crea. Durante la actualización, el componente puede recibir nuevas propiedades o estado y se vuelve a renderizar. Durante el desmontaje el componente se elimina del DOM y se limpian los recursos.
+
+Referenciado de libros:
+E investigado y e encontrado estos libros que me ayudaron a entender un poco mas lo que son los componentes
+
+"React Up & Running" de Stoyan Stefanov y Artemij Fedosejev.
+"Learning React: A Hands-On Guide to Building Web Applications Using React and Redux" de Kirupa Chinnathambi.
+"React: Up & Running: Building Web Applications" de Stoyan Stefanov.
