@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Documentación del Proyecto de Decodificación de Resistencias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Importación de Módulos y Definición de Constantes y Tipos
 
-Currently, two official plugins are available:
+- Se importa React y la función useState desde el paquete 'react'.
+- Se define una constante COLORS que contiene los colores utilizados en las bandas de las resistencias.
+- Se define un tipo TResistorColors que representa los colores de las bandas de resistencia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Función `decodedValue`
 
-## Expanding the ESLint configuration
+Esta función toma un array con dos colores de resistencia y devuelve el valor numérico de la resistencia codificada. Utiliza el método `indexOf` de los arrays para encontrar la posición de cada color en el array COLORS. El valor de la resistencia se calcula multiplicando el índice del primer color por 10 y sumándole el índice del segundo color.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Componente `App`
 
-- Configure the top-level `parserOptions` property like this:
+Se define el componente principal de la aplicación.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Estados
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Se utiliza el hook useState para crear dos estados, `band1` y `band2`, que representan los colores seleccionados para las dos primeras bandas de la resistencia.
+
+### Funciones de Manejo de Eventos
+
+- `handleChangeBand1`: Actualiza el estado `band1` cuando se selecciona un color diferente en el dropdown de la primera banda.
+- `handleChangeBand2`: Actualiza el estado `band2` cuando se selecciona un color diferente en el dropdown de la segunda banda.
+- `handleCalculate`: Calcula el valor de la resistencia decodificada llamando a la función `decodedValue` con los colores seleccionados y muestra el resultado en un cuadro de alerta.
+
+### Renderizado
+
+En el retorno del componente, se renderizan dos dropdowns (`<select>`) para seleccionar los colores de las dos primeras bandas de la resistencia, cada uno con opciones generadas dinámicamente a partir de la constante `COLORS`. También se incluye un botón que al hacer clic llama a la función `handleCalculate`.
+
